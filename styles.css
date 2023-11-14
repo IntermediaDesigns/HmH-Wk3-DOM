@@ -29,16 +29,31 @@
 
 .rabbitEmoji{
        font-size: 40px;
-       display: flex;       
+       transition: opacity 0s;
+       display: block;
+       margin-top: 50px;
+       
+       
 }
 
 .textLine {
+       position: absolute;
+       margin-top: 5px;
+}
+
+#rabbitContainer {
+       flex-wrap: wrap;
        display: flex;
-       width: 100%;
+       align-items: flex-start;
 }
 
 #rabbitContainer div:hover {
        visibility: hidden;
-       display: flex;
+     }
+
+     #bomb {
+       font-size: 100px;
+       color: red;
+       background-color: black;
      }
      
