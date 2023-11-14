@@ -5,35 +5,35 @@
 // // why? this is what fuels interactivity
 
 // // how do i create the circle using dom manipulations
-// // const circle = document.createElement("div");
+const circle = document.createElement("div");
 // // circle.setAttribute("id", "circle");
-// // circle.id = "circle";
+circle.id = "circle";
 
 // // where do we want to put the newly created element? inside the body... how?
 // // we have to do something called "appendChild"
 
 // // before we can append something to something we need to find it
 
-// // body.appendChild(circle);
+body.appendChild(circle);
 
 // // i want a hundred circles
 // // for loop
 
 // // create a container for the circles
-// const circleContainer = document.createElement("div");
+const circleContainer = document.createElement("div");
 // // want to make circleContainer a flexbox
-// circleContainer.style.display = "flex";
-// circleContainer.style.flexWrap = "wrap";
-// circleContainer.style.gap = "5px";
+circleContainer.style.display = "flex";
+circleContainer.style.flexWrap = "wrap";
+circleContainer.style.gap = "5px";
 
-// for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 100; i++) {
 //   // create a div
-//   const circle = document.createElement("div");
+const circle = document.createElement("div");
 //   // set the class as "circle"
-//   circle.className = "circle";
+circle.className = "circle";
 //   // append the div to the body
-//   circleContainer.appendChild(circle);
-// }
+circleContainer.appendChild(circle);
+}
 
 // // append the circleContainer into the body
 // body.appendChild(circleContainer);
