@@ -43,17 +43,65 @@ const imgContainer = document.querySelector('#divContainer2')
 imgContainer.prepend(imgBox)
 
 // 100 red squares in 2 rows for #3
-const redBox = document.createElement('div')
-redBox.setAttribute('id', 'redBox')
-
-const redBoxContainer = document.querySelector('#divContainer3')
+const redBoxContainer = document.querySelector('#divContainer3');
 redBoxContainer.style.display = "flex";
 redBoxContainer.style.flexWrap = "wrap";
 
-redBoxContainer.prepend(redBox)
+for (let i = 0; i < 100; i++) {
+  // Create a new div element for each square
+  const redBox = document.createElement('div');
+  // Style the square
+  redBox.style.width = '10px';
+  redBox.style.height = '10px';
+  redBox.style.background = 'red';
+  redBox.style.margin = '3px'; 
+  
+  redBoxContainer.prepend(redBox);
+}
 
 // Emoji ghost appearing and disappearing for #4
+const ghost = document.createElement("div");
+  ghost.setAttribute('id', `ghostEmoji`);
+  ghost.setAttribute('class', 'ghostEmoji');
+  ghost.textContent = "👻";
 
-// Insert text and emoji of rabbit x 20 for #5
+const ghostContainer = document.querySelector('#divContainer4');
+
+ghostContainer.prepend(ghost);
+
+let seconds = 0;
+
+setInterval(function () {
+  if (seconds % 4 === 0) {
+    ghost.textContent = "👻";
+} else {
+    ghost.textContent = "";
+}
+seconds++;
+}, 2500);
+
+// Insert text "I'm a magician. If I hover over a rabbit, it will disapear!" and emoji of rabbit for #5 🐇 
+const text = document.createElement("p");
+text.setAttribute("id", `textLine`);
+text.setAttribute("class", 'textLine');
+text.textContent = "I'm a magician. If I hover over a rabbit, it will disapear!";
+
+const rabbitContainer = document.querySelector('#divContainer5');
+  rabbitContainer.setAttribute("id", `rabbitContainer`);
+  rabbitContainer.style.display = "flex";
+  rabbitContainer.style.flexWrap = "wrap";
+  rabbitContainer.prepend(text);
+
+for (let i = 0; i < 20; i++) {
+const rabbit = document.createElement("div");
+  rabbit.setAttribute('class', 'rabbitEmoji');
+  rabbit.textContent = "🐇";
+  rabbit.style.margin = '3px'; 
+
+  rabbitContainer.prepend(rabbit);
+  } 
+
+  
+ 
 
 // Create countdown with bomb emoji when seconds are up for #6
