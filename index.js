@@ -92,13 +92,12 @@ text.textContent =
 
 const rabbitContainer = document.querySelector('#divContainer5');
 rabbitContainer.setAttribute('id', `rabbitContainer`);
-rabbitContainer.prepend(text);
 
 for (let i = 0; i < 20; i++) {
   const rabbit = document.createElement('div');
   rabbit.setAttribute('class', 'rabbitEmoji');
   rabbit.textContent = '🐇';
-
+  rabbitContainer.prepend(text);
   rabbitContainer.prepend(rabbit);
 }
 
@@ -116,7 +115,7 @@ setInterval(() => {
   time = time - 1;
   bomb.textContent = `This page will self-destruct in ${time} seconds.`;
   if (time === 0) {
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 1000; i++) {
       let bomb = document.createElement('span');
       bomb.textContent = '💣';
       bombContainer.appendChild(bomb);
