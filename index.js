@@ -84,7 +84,7 @@ seconds++;
 const text = document.createElement("p");
 text.setAttribute("id", `textLine`);
 text.setAttribute("class", 'textLine');
-text.textContent = "I'm a magician. If I hover over a rabbit, it will disapear!";
+text.textContent = "I'm a magician. If I hover over a rabbit, it will disappear!";
 
 const rabbitContainer = document.querySelector('#divContainer5');
   rabbitContainer.setAttribute("id", `rabbitContainer`);
