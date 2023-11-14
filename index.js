@@ -102,22 +102,41 @@ for (let i = 0; i < 20; i++) {
 }
 
 // Create countdown with bomb emoji when seconds are up for #7
-const bomb = document.createElement('div');
-bomb.setAttribute('id', `bomb`);
+/*const bomb = document.createElement('div');
+bomb.setAttribute('id', `bomb`);*/
 
 const bombContainer = document.querySelector('#divContainer6');
 bombContainer.setAttribute('id', `bombContainer`);
 bombContainer.appendChild(bomb);
 
-let time = 1000;
+/*let time = 1000;
 
 setInterval(() => {
   time = time - 1;
   bomb.textContent = `This page will self-destruct in ${time} seconds.`;
   if (time === 0) {
+    
     for (let i = 0; i < 1000; i++) {
       let bomb = document.createElement('span');
       bomb.textContent = '💣';
+      bombContainer.appendChild(bomb);
+    }
+  }
+}, 1000);*/
+
+let destruct = document.createElement("div");
+destruct.id = "destruct";
+bombContainer.appendChild(destruct);
+let time = 1000;
+setInterval(() => {
+  time = time - 1;
+  destruct.textContent = `This page will self-destruct in ${time} seconds.`;
+  if (time === 0) {
+    bombContainer.innerHTML = "";
+    bombContainer.style.backgroundColor = "red";
+    for (let i = 0; i < 10000; i++) {
+      let bomb = document.createElement("span");
+      bomb.textContent = "💣";
       bombContainer.appendChild(bomb);
     }
   }
